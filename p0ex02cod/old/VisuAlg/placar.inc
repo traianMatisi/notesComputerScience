@@ -1,0 +1,6 @@
+escreval("________Placar________")
+      escreval("|                    |")
+      escreval("|   Jogador...[",placarJ,"]   |")
+      escreval("|   Banca.....[",placarB,"]   |")
+      escreval("______________________")
+      escreval("")

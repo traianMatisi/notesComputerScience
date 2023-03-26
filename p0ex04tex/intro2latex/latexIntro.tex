@@ -1,0 +1,273 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8x]{inputenc} %acentuação
+\usepackage[lmargin=2cm, tmargin=1cm, rmargin=2cm, bmargin=1cm]{geometry}
+\usepackage{ucs}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc} %ajusta textos copiados/colados
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, dsfont, mathtools} %símbolos matemáticos
+\usepackage{float}
+\usepackage{graphicx} %permite inserir figuras
+\usepackage{tabto} %permitir tabulação
+\usepackage{blindtext} %lorem ipsum se chamar a função \blindtext
+%\input{file.tex}
+\pagestyle{empty} %turn off page numbers (currently not working in my TeX distro)
+\parindent 0px %turn off indentation
+
+\begin{document}
+
+\title{Introdução ao \LaTeX}
+\author{Traian Matisi}
+%\date{13 mar 2023}
+%\headcm
+%\todayr
+\maketitle
+
+Useful links
+\begin{itemize}
+    \item[i]Personally, I recomend to download the \LaTeX\ distro miktex for linux and/or windows at:\\
+    miktex.org/download
+    \item[ii]Also, I personally recommend as the text editor the texmaker (I use VSCode with some \LaTeX\ extension) you can download texmaker here:\\
+    www.xm1math.net/texmaker/download.html
+    \item[iii]Make ABNT format over here:\\
+    www.abntex.net.br/
+    \item[iv]To learn without modifying your computer you can use Overleaf online:\\
+    https://www.overleaf.com/
+    \item[v]There are other distros as well, my point is, you should use whatever you feel like and like. A'ight, after installation and launch, let's get started.
+\end{itemize}
+
+\section{Introduction}
+Commands are written with backslash in front of words\\
+This document header is writen as it follows (I used special characters for all)
+
+\begin{itemize}
+    \item[1]\textbackslash documentclass$[$12pt, a4paper$]$\{article\}
+    \item[2]\textbackslash usepackage$[$utf8x$]$\{inputenc\}
+    \item[3]\textbackslash usepackage$[$lmargin=2cm, tmargin=2cm, rmargin=2cm, bmargin=2cm$]$\{geometry\}
+    \item[4]\textbackslash usepackage\{ucs\}
+    \item[5]\textbackslash usepackage\{textcomp\}
+    \item[6]\textbackslash usepackage$[$T1$]$\{fontenc\}
+    \item[7]\textbackslash usepackage$[$brazil$]$\{babel\}
+    \item[8]\textbackslash usepackage\{amsmath, amsthm, amsfonts, amssymb, dsfont, mathtools\}
+    \item[9]\textbackslash usepackage\{float\}
+    \item[10]\textbackslash usepackage\{graphicx\}
+    \item[11]\textbackslash usepackage\{tabto\}
+    \item[12]\textbackslash pagestyle\{empty\}
+    \item[13]\textbackslash parindent 0px
+    \item[14]\textbackslash title\{Introdução ao \textbackslash LaTeX \textbackslash\}
+    \item[15]\textbackslash author\{Traian Matisi\}
+    \item[16]\%\textbackslash date\{13 mar 2023\} commented to use compilation date
+    \item[17]\textbackslash begin\{document\}
+    \item[18]\ldots
+    \item[19]\textbackslash end\{document\}
+\end{itemize}
+
+To compile the special characters we did it like this
+\begin{itemize}
+    \item[]\textbackslash \& $\rightarrow$ \&
+    \item[]\textbackslash \% $\rightarrow$ \%
+    \item[]\textbackslash \$ $\rightarrow$ \$
+    \item[]\textbackslash \# $\rightarrow$ \#
+    \item[]\textbackslash \_ $\rightarrow$ \_
+    \item[]\textbackslash \{ $\rightarrow$ \{
+    \item[]\textbackslash \} $\rightarrow$ \}
+    \item[]\$$[$\$ $\rightarrow$ $[$
+    \item[]\$$]$\$ $\rightarrow$ $]$
+    \item[]\textbackslash textasciitilde $\rightarrow$ \textasciitilde
+    \item[]\textbackslash textasciicircum $\rightarrow$ \textasciicircum
+    \item[]\textbackslash textbackslash $\rightarrow$ \textbackslash
+\end{itemize}
+
+Return characters:\\
+To make to the next line
+\begin{itemize}
+    \item[a]Hard return is a blank line, use for new paragraph
+    \item[b]Soft return is \textbackslash\textbackslash, use for new line in paragraph
+    \item[c]We can put a size argument after the double backslash \textbackslash\textbackslash$[$6cm$]$ or pt, in, mm, etc\ldots
+\end{itemize}
+
+\section{Formating}
+%\begin{document}
+%\end{document}
+%
+%\section{<name>}
+%\subsection{<name>}
+%
+%\begin{center}
+%\end{center}
+%\begin{flushright}
+%\end{flushright}
+%\begin{flushleft}
+%\end{flushleft}
+%\begin{???justified???}
+%\end{???justified???}
+%
+%\begin{itemize}
+%\end{itemize}
+%\begin{enumerate}
+%\end{enumerate}
+%
+%\textbf{negrito/bold}
+%\textit{italico/italico}
+%\underline{sublinhado}
+%
+%ACIMA PODEM ANINHAR
+%
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=2cm]{nome.png}
+%\caption{Legenda dessa figura}
+%\label{Imagem-01}
+%\end{figure}
+%
+%\ref{Imagem-01}
+%
+%\vspace{5cm}
+%
+%\begin{array}{ccc...cc}
+%   a & b & c & ... & y & z\\
+%   A & B & C & ... & Y & Z\\
+%\end{array}
+%
+%   $
+%   \left[\begin{array}{ccc...cc}
+%
+%   a & b & c & ... & y & z\\
+%   A & B & C & ... & Y & Z\\
+%
+%   \end{array}\right]
+%   $
+%
+%\begin{equation}
+%   $x=y$
+%   \lim_{x\displaystyle\rightarrow 0}f(x)
+%   \iiinto_0^1f(x)dx
+%\end{equation}
+%
+%\begin{tabular}{!}{c|l|r|...|c|}\hline
+%   \hline
+%\end{tabular}
+%
+%\begin{table}{!}{c|l|r|...|c|}\hline
+%   \caption{legenda}
+%   \label{etiqueta}
+%
+%   \hline
+%\end{table}
+%
+%\begin{figure}
+%   \begin{minipage}[!]{0.35\linewidth}
+%       \centering
+%       \caption
+%       \includegraphics[\width=\linewidth]{marca}
+%      \label{my_label}
+%   \end{minipage}
+%   \begin{minipage}[!]{0.35\linewidth}
+%       \centering
+%       \caption
+%       \includegraphics[\width=\linewidth]{marca}
+%      \label{my_label}
+%   \end{minipage}
+%   \begin{minipage}[!]{0.35\linewidth}
+%       \centering
+%       \caption
+%       \includegraphics[\width=\linewidth]{marca}
+%      \label{my_label}
+%   \end{minipage}
+%   \begin{minipage}[!]{0.35\linewidth}
+%       \centering
+%       \caption
+%       \includegraphics[\width=\linewidth]{marca}
+%      \label{my_label}
+%   \end{minipage}
+%\end{figure}
+%
+%
+%
+%
+%
+%
+%
+
+\section{Math}
+Common mathematical notations
+
+\begin{itemize} %we can use \begin{enumerate}...\end{enumerate}
+    \item[i] Sum: $x+y$
+    \item[ii] Subtraction: $x-y$
+    \item[iii] Product: $x\cdot y$
+    \item[iii] Product: $x\times y$
+    \item[iv] Division: $\frac{x}{y}$
+    \item[iv] Division: $\dfrac{x}{y}$
+    \item[iv] Division: $x\div y$
+    \item[iv] Division: $x / y$
+    \item[iv] Division: $x : y$
+    \item[v] Sometimes the fractions are resized inside phrases like this $\displaystyle \frac{1}{2}$; $\frac{1}{2}$; $\dfrac{1}{2}$
+\end{itemize}
+
+Math symbols and letters needs the money sign as delimiters \$$2x^2$\$
+
+Two dollar signs in each end makes the equation centered and in his own line\\
+If we type \$\$2x\textasciicircum 2\$\$ we get: $$2x^2$$
+
+We can have some problem with two digits exponentials, we should wrap the whole exponent (wich we call it superscript) with curly braces, if we want $x^{12}$ we should write it like this: $$\$x\textasciicircum\{12\}\$ \rightarrow x^{12}$$
+The same is true for subscripts, for invoking such we use underline. To write $C_{6}H_{12}O_{6}$ we should write: $$\$C\_\{6\}H\_\{12\}O\_\{6\}\$ \rightarrow C_{6}H_{12}O_{6}$$
+
+Subscripts can be nested, as so superscript.
+
+Some greek letters are just words after the backslash
+
+\begin{itemize}
+    \item [] \textbackslash pi = $\pi$
+    \item [] \textbackslash Pi = $\Pi$
+    \item [] \textbackslash alpha = \textbackslash pi r\textasciicircum2 $\rightarrow$ $\alpha = \pi r^{2}$
+\end{itemize}
+
+Some trigonometrics functions
+
+\begin{itemize}
+    \item [] \$\textbackslash sin x\$ $\rightarrow \sin x$
+    \item [] \$\textbackslash tan \textbackslash alpha\$ $\rightarrow \tan \alpha$
+    \item [] \$\textbackslash cos\textasciicircum\{-1\} y\$ $\rightarrow \cos^{-1} y$
+\end{itemize}
+
+Logarithmics functions
+
+\begin{itemize}
+    \item [] \$\textbackslash log x\$ $\rightarrow \log x$
+    \item [] \$y = \textbackslash log \_\{5\}x\$ $\rightarrow y = \log_{5} x$
+\end{itemize}
+
+Roots
+
+\begin{itemize}
+    \item [] \$\textbackslash sqrt\{16\}\$ $\rightarrow \sqrt{16}$
+    \item [] \$\textbackslash sqrt$[$3$]$\{8\}\$ $\rightarrow \sqrt[3]{8}$
+    \item [] With nested roots, we put the inside roots inside the curly brackets
+\end{itemize}
+
+Math notations
+
+\begin{itemize}
+    \item [] Parenthesis and set notation:\\$a(b+c) = ab + ac \rightarrow a, b, c \in \mathbb{R}$
+    \item [] Parenthesis unscaled to equation size\\$2\left(\frac{1}{x^{2}-1}\right)$
+    \item [] Parenthesis scaled to equation size\\$2\left(\dfrac{1}{x^{2}-1}\right)$
+    \item [] Square brackets scaled to equation size\\$2\left[\dfrac{1}{x^{2}-1}\right]$
+    \item [] Curly brackets scaled to equation size\\$2\left\{\dfrac{1}{x^{2}-1}\right\}$
+    \item [] One side curly bracket scaled to equation size\\$\left\{\dfrac{x+y = 2}{x-y=-1}\right.$
+    \item[] One side pipe scaled to equation size\\$\left.\dfrac{dy}{dx}\right|_{x=1}$
+    \item[] Module brackets scaled to equation size\\$2\left|\dfrac{1}{x^{2}-1}\right|$
+    \item[] Norm brackets scaled to equation size\\$2\left|\left|\dfrac{1}{x^{2}-1}\right|\right|$
+    \item[] Angle brackets scaled to equation size\\$2\left\langle\dfrac{1}{x^{2}-1}\right\rangle$
+    \item[] Parenthesis with inside parenthesis unscaled\\$\left(\frac{1}{1+\left(\frac{1}{1+x}\right)}\right)$
+    \item[] Parenthesis with inside parenthesis scaled\\$\left(\dfrac{1}{1+\left(\dfrac{1}{1+x}\right)}\right)$
+\end{itemize}
+
+\section{Tables}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline%c means centered, pipe makes a wall, r align in right, l in left
+$x$ & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+$f(x)$ & 10 & 11 & 12 & 13 & 14 & 15 \\\hline
+\end{tabular}
+%\vspace[1cm]
+\end{document}

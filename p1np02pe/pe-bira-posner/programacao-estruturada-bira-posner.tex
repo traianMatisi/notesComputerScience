@@ -1,0 +1,104 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[lmargin=2cm, tmargin=2cm, rmargin=2cm, bmargin=2cm]{geometry}
+\usepackage{ucs}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, dsfont, mathtools}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabto}
+\pagestyle{empty} %turn off page numbers (currently not working in my TeX distro)
+\parindent 0px %turn off indentation
+\title{Notas de aula - Programação estruturada 2021-1}
+\author{Traian Matisi}
+
+\begin{document}
+
+\begin{itemize}
+
+\item Linguagem natural:
+Imensa capacidade de comunicar.
+
+\item Linguagem algoritmica:
+Limitada e restrita visando precisão e objetividade, procura evitar ambguidade.
+
+\item Pseudocódigo:
+Usa linguagem natural de maneira algoritmica visando um meio termo, criando assim uma ponte entre o mundo real e o progrma que se deseja.
+
+\item Fluxograma:
+Representação ilustrada do pseudocódigo, visa orientar melhor o programador, cada tipo de algoritmo é representado por uma forma geométrica.
+
+\item Algoritmo:
+Sequência de passos bem definidos, sem ambiguidade, finito e que se propõe a solucionar algum problema. Se assemelha a uma receita. Os algoritmos possuem estruturas básicas que emulam as propriedades das linguagens de programação. Os problemas sempre possuem mais de uma solução, e portanto existem mais de um algoritmos para um mesmo problema.
+
+\item As características fundamentais dos algoritmos\\
+\#1 - Terminar em tempo finito\\
+\#2 - Passos definidos e sem ambiguidade\\
+\#3 - Deve conter zero ou mais entradas\\
+\#4 - Deve fornecer alguma saída\\
+\#5 - Deve funcionar\\
+\#Exemplo $\rightarrow ax+b=0 \rightarrow x=-b/a$\\
+"a" e "b" são as entradas e x é a saída\\
+
+\item Escrevendo o algoritmo para calcular x:\\
+1 - leia a ($a \leftarrow$ primeira entrada)\\
+2 - leia b ($b \leftarrow$ segunda entrada)\\
+3 - $x \leftarrow (-b/a)$\\
+4 - escreva x
+
+\item Já temos aqui os conceitos de variáveis e operadores aritméticos. Perceba que matematicamente o algoritmo acima não trata da entrada de a = 0. Pra isso teríamos que verificar antes se há condição de realizar o código, e para isso exitem estruturas básicas em programação pra tratar possíveis erros.
+
+\item Pseudocódigo, achar X numa equação de primeiro grau:\\
+1 Ler a\\
+2 Ler b\\
+3 Se $(a=0)$ então:\\
+4 \tabto{1.1cm} Escreva: "A equação não tem solução $\mathbb{R}$."\\
+5 Senão:\\
+6 \tabto{1.1cm} $x \leftarrow (-b/a)$\\
+7 Fim-Se.
+
+\item Pseudocódigo, calcular média das notas:\\
+1 Ler nota $a$\\
+2 Ler nota $b$\\
+3 $x \leftarrow \frac{a+b}{2}$\\
+4 Escrever $x$\\
+É possivel criar outro fluxo ou mesmo estender esse para verificar se a nota é suficiente para passar
+
+\item Pseudocódigos precisam ser simples e objetivos:\\
+1 Um verbo por frase\\
+2 Precisa ser compreensível por qualquer público\\
+3 Frases curtas e simples\\
+4 Ser objetivo\\
+5 Não ser ambíguo\\
+6 Palavras em negrito significam palavras reservadas para instruções\\
+7 Palavras em itálico significam variáveis\\
+8 No papel escrito não há necessiddade de negrito ou itálico
+
+\item Símbolos de fluxograma:\\
+1 Cilindro: Símbolo para início e fim, podem existir mais de um símbolo final\\
+2 Retângulo: Símbolo de processamento\\
+3 Losango: Símbolo de tomada de decisões\\
+4 Trapezóide: Símbolo de entrada de dados\\
+5 Skate pipe: Símbolo de saída de dados\\
+6 Pequeno círculo: Conector de fluxos entre páginas ou entre ramos\\
+
+\item Como exercício, realizar os dois pseudocódigos acima com os seis símbolos aprendidos.
+
+\item Existem mais símbolos além desses seis para concorrência, verificação de erros, etc. serão abordados num futuro próximo.
+
+\item Tipos de comandos:\\
+1 Ler\\
+2 Escrever\\
+3 Atribuição\\
+4 Dados booleanos\\
+5 Dados numéricos\\
+6 Dados alfanuméricos\\
+7 Condicional: se, senão\\
+n Repetição:\\
+n Procedimentos:\\
+
+\end{itemize}
+
+\end{document}
