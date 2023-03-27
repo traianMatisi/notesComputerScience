@@ -28,7 +28,11 @@
 		\item WORA := Write Once, Run Anywhere
 		\item JIT := Just In Time
 		\item JDK := Java Developer Kit
-		\item JRE := Java Runtime Environment\\
+			\begin{itemize}
+				\item JDK = JRE + JavaLang + JavaTools
+				\item JavaTools = JavaC + Debugger + APIs
+			\end{itemize}
+		\item JRE := Java Runtime Environment
 			\begin{itemize}
 				\item JRE = JVM + libs
 				\item JVM = Loader + Verifier + Interpreter + MemManag + JIT
