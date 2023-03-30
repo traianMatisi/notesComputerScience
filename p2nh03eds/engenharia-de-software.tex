@@ -1,0 +1,316 @@
+\documentclass{article}
+
+\begin{document}
+
+-=-=-=-=-=-=-=-=-=-=-=-\\
+| Engenharia de Software   |\\
+-=-=-=-=-=-=-=-=-=-=-=-\\
+
+
+Trabalho prático 4:
+
+	-Realizar a inspeção do Documento de Requisitos E da Descrição dos Casos de Uso.
+		Levar em consideração os critérios de qualidade dos requisitos e casos de uso.
+		Levar em consideração a necessidade dos documentos estarem consistentes entre si.
+	-A inspeção deve ser realizada a partir de duas atividades.
+		--> Planejamento --> Detecção.
+		planejamento: definir um checklist com questões para apoiar a inspeção.
+		detecção: identificar defeitos, preenchendo o checklist, apresentando os problemas identificados e sugerindo alterações para corrigi-los.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-\\
+| 18 - Gerência de qualidade   |\\
+-=-=-=-=-=-=-=-=-=-=-=-=-\\
+
+Qualidade é um atributo subjetivo. Contudo podemos escolher algumas abordagens para padronizar um controle de qualidade.
+Primeiro, temos que dividir o processo de melhoria da qualidade em duas etapas.
+
+	-Análise do problema.
+	-Projeto da solução.
+
+Os atributos de um software de qualidade variam de pessoa pra pessoa, mas podemos escolher algumas abordagens comuns.
+Essas abordagens levam em conta algumas características do software:
+
+	-Tamanho do software.
+	-Complexidade do software.
+	-Métodos, técnicas e ferramentas utilizadas.
+	-Custo/benefício.
+	-Custos associados à existência de erros.
+	-Custos associados à detecção e remoção de erros.
+	-Etcetera
+
+Na história, tivemos 3 grandes "escolas de qualidade nas industrias":
+
+	-Inspeção de produtos individualmente (industria artesanal).
+	-Inspeção por amostragem (linha de produção).
+	-Inspeção do processo produtivo.
+
+Abordagens de qualidade:
+
+	Abordagem Deming:
+
+		-Qualidade inicia com alto nível gerencial.
+		-Qualidade desde os fornecedores até o cliente final.
+		-Fazer certo na primeira vez.
+		-14 princípios.
+
+	Abordagem Feigenbaum:
+
+	Abordagem Crosby:
+
+	Abordagem do Ciclo PDCA (plan-do-check-act) - Forma de controle de processo:
+
+		-P
+		-D
+		-C
+		-A
+
+Ferramentas de qualidade:
+
+	-Fluxograma.
+	-Diagrama de Ishikawa.
+	-Gráfico de Paretto
+	-Histograma.
+	-Diagrama de dispersão.
+	-Folha de verificação.
+	-Gráfico de controle.
+
+Qualidade do produto versus Qualidade do processo.
+
+	Qualidade do PRODUTO depende de:
+
+		-Qualidade do PROCESSO.
+		-Qualidade da equipe
+		-Tecnologias do desenvolvimento.
+		-Custo/Tempo/Cronograma
+
+	Qualidade do PROCESSO influencia:
+
+		-Atributos da qualidade interna do produto.
+		-Atributos da qualidade externa do produto.
+		-Atributos da qualidade de uso do produto.
+
+		Para controlar a melhoria do processo:
+
+			-Medir/avaliar o processo.
+			-controlar o processo.
+			-Executar o processo.
+			-Melhorar o processo.
+			-Definir o processo.
+
+		Normas e modelos de maturidade da qualidade de processo:
+
+			ISO/IEC 12.207
+			ISO/IEC 33.0xx
+			CMMI-DEV
+			MR-MPS
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\\
+| 20 - Planejamento e projetos de Testes   |\\
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\\
+
+Teste: Processos de execução controlada do software
+
+	Visa determinar:
+
+		Se atingiu as especificações.
+		Se funciona corretamente pro seu contexto.
+		
+		Testes visam revelar as falhas do produto.
+
+			| falha --> | erro --> | defeito | <-- erro | <-- falha |
+
+		Depuração é algo não previsto em teste.
+
+			Revelada a presença do falha os defeitos devem ser identificados e corrigidos.
+
+		Passar em todos os testes não significa que o software não tenha defeitos, mas sim significar que os testes não eram bons nem abrangentes.
+
+			Testes só podem mostrar a PRESENÇA de erros, não sua AUSÊNCIA. -Dijkstra-
+
+		Testes destrutivos versus Testes construtivos
+
+			Visão tradicional
+			Visão ágil
+
+		Testes se baseiam quase em sua totalidade nos requisitos e seus documentos. Testam o software em todos os estágios do desenvolvimento. E mesmo as menores mudanças nos requisitos podem afetar completamente a abordagem dos testes e seus resultados.
+
+			-Devem ser rastreáveis aos requisitos.
+			-Devem ser completamente planejados antes do início.
+			-O princípio 80/20 de Paretto se aplica aos testes.
+			-Os testes devem inicialmente serem pequenos e depois escalar.
+
+	Conceitos básicos:
+
+		-Casos de teste: descrição de condição particular a ser testada.
+		-Procedimento de teste: descrição dos passos necessários para a execução de um ou mais grupos de casos de teste.
+		-Critérios de cobertura de teste: percentual de elementos testados.
+		-Bateria de testes: um ciclo de execução de todos os procedimentos de teste para uma versão do produto.
+
+	Processos de testes:
+
+		Planejamento de projeto de testes.
+
+			- Planejar testes.
+
+				– Definir contexto e escopo dos testes
+				– Estimar esforço
+				– Alocar recursos humanos
+
+		Captura de requisitos.
+
+			- Planejar testes.
+
+				– Definir contexto e escopo dos testes
+				– Estimar esforço
+				– Alocar recursos humanos
+
+		Análise e projeto.
+
+			- Projetar testes.
+
+				– Preparação do ambiente
+				– Criar estratégias e diretrizes
+				– Identificar casos e procedimentos de teste
+				– Especificar critério de aprovação
+
+		Implementação
+
+			- Implementar testes.
+			- Executar testes.
+			- Avaliar testes.
+
+		As atividades do planejamento:
+
+			- Especificar casos de teste.
+
+				-Especificar entradas e saídas
+				-Especificar restrições de uso.
+				-Definir dependências entre casos.
+
+			- Definir procedimentos de teste.
+
+				-Definir Requisitos
+				-Descrever passos.
+
+		As atividades de execução:
+
+			- Executar testes.
+
+				-Configurar ambiente de teste.
+				-Executar procedimentos de teste.
+				-Registrar incidentes.
+
+			- Analisar resultados.
+
+				-Registrar dados dos testes.
+
+Classificação SWEBOK.
+
+Classificação DI LUCCA e FASOLINO.
+
+Classificação CRESPO ET AL.
+
+Trabalho prático 5:
+
+	-Definir testes para o projeto inicial. É preciso justificar:
+		
+		Níveis de teste.
+
+			Teste de unidade.
+			Teste de integração.
+			Teste de sistema.
+			Teste de aceitação.
+			Teste de regressão.
+
+		Tipos de teste.
+
+			Teste de funcionalidades.
+			Teste de interface.
+			Teste de desempenho.
+			Teste de carga (stress).
+			Teste de usabilidade.
+			Teste de volume.
+
+		Técnicas de teste.
+		
+			Teste funcional.
+			Teste estrutural.
+
+	-Pesquise alguma ferramenta de apoio aos testes e apresente por meio dos seguintes itens:
+		
+		Descrição geral.
+		Quais tipos de testes apoia.
+		Principais funcionalidades.
+		Como os resultados são apresentados.
+		
+		Lista das ferramentas:
+		
+			-Selenium.
+			-Appium.
+			-Cucumber.
+			-JMeter.
+			-TestNG.
+			-WatiR.
+			-Cypress.
+			-JUnit.
+			-TestComplete.
+			-Telerik Test Studio.
+			-FitNesse.
+			
+-=-=-=-=-=-=-=-=-=-=-=-\\
+| Planejamento de testes    |\\
+-=-=-=-=-=-=-=-=-=-=-=-\\
+Requisitos
+
+	Página de informações
+	Tela de Login
+	cadastro
+		-Criação
+		-Edição
+		-Cancelamento
+	API de otimizações
+	Dashboard com estatísticas
+	Dashboard do status da cidade
+	Recarga do bilhete integração
+	Online 24 horas
+	Banco de dados da prefeitura
+	Segurança e privacidade
+	Efetivar apenas cadastros elegíveis
+	Primeira recarga mínima
+	Período de carência para cancelamento
+	Pagamento
+		-QR code
+		-Aproximação
+	Bloquear motorista em período de penalidades
+	Bloquear usuários por fraudes
+	Cadastrar motoristas de aplicativos
+	Identificar o motorista
+	Preservar privacidade dos usuários
+	Informar status do tráfego em tempo real
+	Informara estatísticas da cidade
+	Informar condições de frota
+	Sinalizar estados de emergência
+	Permitir acesso às instituições de saúde
+	Permitir acesso às instituições de segurança pública
+	Utilizar servidores e base de dados da CET Rio e
+FETRANSPOR
+	Informar situações legais das empresas de transporte
+
+Casos de uso
+
+	Cadastrar usuários
+	Cancelar cadastro de usuário.
+	Otimizar percurso.
+	Verificar eventos.
+	Recarregar saldo.
+	Pagar viagem.
+	Cadastrar motorista.
+	Cancelar cadastro de motorista.
+	Cobrar viagem.
+	Validar documentação.
+	Sinalizar eventos.
+	Otimizar uso de infraestrutura
+
+	Volto em 5
+
+\end{document}
