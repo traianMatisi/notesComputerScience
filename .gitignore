@@ -4,6 +4,7 @@
 coursera-and-google-intro-to-git.aux
 coursera-and-google-intro-to-git.dvi
 coursera-and-google-intro-to-git.log
+coursera-and-google-intro-to-git.out
 coursera-and-google-intro-to-git.pdf
 coursera-and-google-intro-to-git.synctex.gz
 coursera-and-google-intro-to-git.tex.bak
@@ -12,6 +13,7 @@ coursera-and-google-intro-to-git.tex.bak
 latexIntro.aux
 latexIntro.dvi
 latexIntro.log
+latexIntro.out
 latexIntro.pdf
 latexIntro.synctex.gz
 latexIntro.tex.bak
@@ -20,6 +22,7 @@ latexIntro.tex.bak
 programacao-estruturada-bira-posner.aux
 programacao-estruturada-bira-posner.dvi
 programacao-estruturada-bira-posner.log
+programacao-estruturada-bira-posner.out
 programacao-estruturada-bira-posner.pdf
 programacao-estruturada-bira-posner.synctex.gz
 programacao-estruturada-bira-posner.tex.bak
@@ -28,6 +31,7 @@ programacao-estruturada-bira-posner.tex.bak
 arquitetura-de-computadores.aux
 arquitetura-de-computadores.dvi
 arquitetura-de-computadores.log
+arquitetura-de-computadores.out
 arquitetura-de-computadores.pdf
 arquitetura-de-computadores.synctex.gz
 arquitetura-de-computadores.tex.bak
@@ -36,6 +40,7 @@ arquitetura-de-computadores.tex.bak
 engenharia-de-software.aux
 engenharia-de-software.dvi
 engenharia-de-software.log
+engenharia-de-software.out
 engenharia-de-software.pdf
 engenharia-de-software.synctex.gz
 engenharia-de-software.tex.bak
@@ -44,6 +49,7 @@ engenharia-de-software.tex.bak
 engenharia-de-software.aux
 engenharia-de-software.dvi
 engenharia-de-software.log
+engenharia-de-software.out
 engenharia-de-software.pdf
 engenharia-de-software.synctex.gz
 engenharia-de-software.tex.bak
@@ -52,9 +58,19 @@ engenharia-de-software.tex.bak
 oop-curso-em-video.aux
 oop-curso-em-video.dvi
 oop-curso-em-video.log
+oop-curso-em-video.out
 oop-curso-em-video.pdf
 oop-curso-em-video.synctex.gz
 oop-curso-em-video.tex.bak
 
+#harvard-introducao-a-ciencia-da-computacao-cs50
+harvard-introducao-a-ciencia-da-computacao-cs50.aux
+harvard-introducao-a-ciencia-da-computacao-cs50.dvi
+harvard-introducao-a-ciencia-da-computacao-cs50.log
+harvard-introducao-a-ciencia-da-computacao-cs50.out
+harvard-introducao-a-ciencia-da-computacao-cs50.pdf
+harvard-introducao-a-ciencia-da-computacao-cs50.synctex.gz
+harvard-introducao-a-ciencia-da-computacao-cs50.tex.bak
+
 #audioFiles
-toqueMrRobot.mp3
+#toqueMrRobot.mp3
