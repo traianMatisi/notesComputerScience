@@ -74,3 +74,12 @@ harvard-introducao-a-ciencia-da-computacao-cs50.tex.bak
 
 #audioFiles
 #toqueMrRobot.mp3
+
+#c
+c.aux
+c.dvi
+c.log
+c.out
+c.pdf
+c.synctex.gz
+c.tex.bak

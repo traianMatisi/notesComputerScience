@@ -34,7 +34,7 @@
 \section{Aula 00 - Scratch}
 Visualizando algoritmos
 
-O algoritmos é o fundamentos da ciência da computação. Algoritmos só existem com a função de resolver problemas. Pra ser um programador, você precisa desenvolver a sua capacidade de resolver problemas e transformá-lo em um algoritmo. $$x_{problema}\rightarrow f(x)_{algoritmo}\rightarrow y_{solução}$$
+O algoritmos é o fundamento da ciência da computação. Algoritmos só existem com a função de resolver problemas. Pra ser um programador, você precisa desenvolver a sua capacidade de resolver problemas e transformá-lo em um algoritmo. $$x_{problema}\rightarrow f(x)_{algoritmo}\rightarrow y_{solução}$$
 
 \subsection{Representação de dados}
 Computadores usam apenas números, e ainda por cima, apenas números binários, então se quisermos representar qualquer número decimal teremos que converter de binário para decimal. Para letras, teremos que associar um número binário para cada letra (e símbolo), e o mesmo será feito para cores, sons, e qualquer coisa que queiramos representar, usaremos os números inteiros relativos à $2^n$. O padrão precisa ser aceito e oficializado visando faciitar a comunicação entre computadores e comunicação entre profisionais. Os padrôes diferentes como unicode, podemos representar acentos, ideogramas e emojis.
@@ -46,23 +46,13 @@ Computadores usam apenas números, e ainda por cima, apenas números binários, 
 \item Hexadecimal (0x)\\0 1 2 3 4 5 6 7 8 9 A B C D E F
 \end{itemize}
 
-\subsection{Propriedades de um algoritmo}
-\begin{itemize}
-\item Correct
-\item Valid
-\item Efficient
-\item Design
-\end{itemize}
-
 \subsection{Big O(n)}
 Tamanho do problema versus Tempo de resolução
 \begin{itemize}
 \item O($1$)
 \item O($n$)
 \item O($n^2$)
-\item O()
-\item O()
-\item O()
+\item O($log_{10}n$)
 \end{itemize}
 
 \subsection{Pseudocódigo}
@@ -72,24 +62,51 @@ Tamanho do problema versus Tempo de resolução
 
 \subsection{Interface gráfica para programação}
 \begin{itemize}
-\item 
+\item Blockly
+\item Scratch
+\item Grasshopper
 \end{itemize}
 
 \section{Aula 01 - Programação em C}
 Linguagem de programação estruturada
 
 \subsection{helloWorld.c}
-
 \begin{enumerate}
 \item \# include <stdio.h>
 \item int main(void)\{
 \item \tabto{1.1cm}printf("Hello, world".);
-\item \tabto{1.1cm}return 0;
 \item \}
 \end{enumerate}
 
+\subsection{Anatomia de um programa C}
 \begin{itemize}
-\item 1
+\item Pré-processamento
+\item Bibliotecas
+\item Tipos
+\item Constantes
+\item Variáveis
+\item Formatadores
+\item Caracteres de escape
+\item Argumentos
+\item Funções
+\item Efeitos colaterais
+\item Valores de retorno
+\item Blocos
+\item Protótipos
+\end{itemize}
+
+\subsection{Propriedades de um algoritmo}
+\begin{itemize}
+\item Correctness\\Resolve todos os problemas a que se propõe?
+\item Design\\Usa as ferramentas apropriadas?
+\item Bug free\\Tem algum defeito de lógica ou sintático? 
+\item Style\\É legível?
+\item Efficiency\\Das ferramentas apropriadas, usa a melhor possível?
+\end{itemize}
+
+\subsection{Debuggin}
+\begin{itemize}
+\item -
 \end{itemize}
 
 \section{Aula 02 - Vetores}
