@@ -73,7 +73,7 @@ harvard-introducao-a-ciencia-da-computacao-cs50.synctex.gz
 harvard-introducao-a-ciencia-da-computacao-cs50.tex.bak
 
 #audioFiles
-#toqueMrRobot.mp3
+toqueMrRobot.mp3
 
 #c
 c.aux
@@ -83,3 +83,4 @@ c.out
 c.pdf
 c.synctex.gz
 c.tex.bak
+/p0ex02cod/java/HelloFriend/target/
