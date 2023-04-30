@@ -18,6 +18,24 @@ latexIntro.pdf
 latexIntro.synctex.gz
 latexIntro.tex.bak
 
+#rascunho
+rascunho.aux
+rascunho.dvi
+rascunho.log
+rascunho.out
+rascunho.pdf
+rascunho.synctex.gz
+rascunho.tex.bak
+
+#grafosAlgoritmos
+grafosAlgoritmos.aux
+grafosAlgoritmos.dvi
+grafosAlgoritmos.log
+grafosAlgoritmos.out
+grafosAlgoritmos.pdf
+grafosAlgoritmos.synctex.gz
+grafosAlgoritmos.tex.bak
+
 #programacao-estruturada-bira-posner
 programacao-estruturada-bira-posner.aux
 programacao-estruturada-bira-posner.dvi
