@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Traian
+ *
+ */
+module cursojavabasico {
+}

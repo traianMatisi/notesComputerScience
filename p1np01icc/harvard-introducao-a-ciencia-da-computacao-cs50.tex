@@ -1,5 +1,8 @@
 \documentclass[12pt,a4paper]{article} %tipo de documento papel e tamanho da fonte
 \usepackage[utf8x]{inputenc} %acentuação
+%\usepackage{fontspec} % for use in combo with \setmainfont{}
+%\setmainfont{file-name.ttf}[Path=file-path, BoldFont={file-name}, ItalicFont={file-name}, BoldItalicFont={file-name}]
+%\setsansfont{file-name.otf}[Path=file-path, BoldFont={...]
 \usepackage{ucs}
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc} %ajusta textos copiados/colados
@@ -15,14 +18,15 @@
 \usepackage{lmodern}
 \usepackage{fourier}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry} %layout da página
-\usepackage{textcomp}
+%\usepackage{textcomp}
 \usepackage{tabto} %permitir tabulação
-\usepackage{hyperref} % You can use \url with \usepackage{hyperref} \url{http://stackoverflow.com/}
-\usepackage{todonotes} %enables you to insert small notes, like \todo{Rewrite this answer \ldots}
-
+%\usepackage{hyperref} % You can use \url with \usepackage{hyperref} \url{http://stackoverflow.com/}
+%\usepackage{todonotes} %enables you to insert small notes, like \todo{Rewrite this answer \ldots}
+%\usepackage{indentfirst}
+%\setlength{parindent}{1.1cm}
 \pagestyle{empty} %turn off page numbers (currently not working in my TeX distro)
-\parindent 0px %turn off indentation
-
+%\parindent 0px %turn off indentation
+%\setmainfont{<font name>}
 \author{Traian Matisi}
 \title{CS50 - Introdução à ciência da computação de Harvard}
 %date{}
@@ -34,7 +38,7 @@
 \section{Aula 00 - Scratch}
 Visualizando algoritmos
 
-O algoritmos é o fundamento da ciência da computação. Algoritmos só existem com a função de resolver problemas. Pra ser um programador, você precisa desenvolver a sua capacidade de resolver problemas e transformá-lo em um algoritmo. $$x_{problema}\rightarrow f(x)_{algoritmo}\rightarrow y_{solução}$$
+O algoritmos é o fundamento da ciência da computação. Algoritmos só existem com a função de resolver problemas. Pra ser um programador, você precisa desenvolver a sua capacidade de resolver problemas e transformá-lo em um algoritmo. $$x_{(problem)}\rightarrow f(x)_{(algorithm)}\rightarrow y_{(solution)}$$
 
 \subsection{Representação de dados}
 Computadores usam apenas números, e ainda por cima, apenas números binários, então se quisermos representar qualquer número decimal teremos que converter de binário para decimal. Para letras, teremos que associar um número binário para cada letra (e símbolo), e o mesmo será feito para cores, sons, e qualquer coisa que queiramos representar, usaremos os números inteiros relativos à $2^n$. O padrão precisa ser aceito e oficializado visando faciitar a comunicação entre computadores e comunicação entre profisionais. Os padrôes diferentes como unicode, podemos representar acentos, ideogramas e emojis.
@@ -97,17 +101,48 @@ Linguagem de programação estruturada
 
 \subsection{Propriedades de um algoritmo}
 \begin{itemize}
-\item Correctness\\Resolve todos os problemas a que se propõe?
-\item Design\\Usa as ferramentas apropriadas?
+\item Correctness\\Resolve todos os problemas a que se propõe?\\Roda e funciona, mas resolve realmente o problema para o qual foi imaginado?
+\item Design\\Usa as ferramentas apropriadas?\\Bons argumentos podem ser mal-articulados, bons programas são bem desenhados.
 \item Bug free\\Tem algum defeito de lógica ou sintático? 
-\item Style\\É legível?
+\item Style\\É legível?\\Segue boas práticas e ou padrões propostos e convenções?
 \item Efficiency\\Das ferramentas apropriadas, usa a melhor possível?
 \end{itemize}
 
 \subsection{Debuggin}
 \begin{itemize}
-\item -
+\item Leia documentação da linguagem
+\item Leia os comentários //(que também são documentação)
+\item Use printf/consoleLog
 \end{itemize}
+
+\subsection{Known CLI commands}
+\begin{itemize}
+\item ls: shows files in the directories, [-a: all], [-l: list]
+\item mv: move files or rename files
+\item rm: remove/delete file/empty directory [-r: remove non-empty directories]
+\item rmdir: remove directory
+\item mkdir: make directory/create folder
+\item cd: change directory [. means this directory] [.. means higher directory]
+\item cp: copy file/directory
+\end{itemize}
+
+\subsection{Data types and its formaters}
+\begin{itemize}
+\item int: (\%i ou \%d) [32 bits ou 4 bytes] conta de até
+\item float: (\%f) [64 bits ou 8 bytes] conta de até 
+\item double: (\%lf) [bits ou bytes] conta de até
+\item char: *not real in C, it's actually an array* (\%c) [bits ou bytes] conta de até
+\item string: (\%c)
+\item long: (\%li) [bits ou bytes] conta de até
+\item short: (\%i ou \%d) [bits ou bytes] conta de até
+\item signed: (\%i ou \%d) [bits ou bytes] conta de até
+\item unsigned: (\%i ou \%d) [bits ou bytes] conta de até
+\end{itemize}
+Some operations, like division, needs that the terms be both the same type, as to not lose data in decimal values. In the case we dont have acces to the type, we can cast the type over the old type
+
+\subsection{Mathematical operators}
+
+\subsection{Logical operators}
 
 \section{Aula 02 - Vetores}
 
