@@ -50,7 +50,7 @@ Computadores usam apenas números, e ainda por cima, apenas números binários, 
 \item Hexadecimal (0x)\\0 1 2 3 4 5 6 7 8 9 A B C D E F
 \end{itemize}
 
-\subsection{Big O(n)}
+\subsection{Ordem O(n)}
 Tamanho do problema versus Tempo de resolução
 \begin{itemize}
 \item O($1$)
@@ -82,10 +82,23 @@ Linguagem de programação estruturada
 \item \}
 \end{enumerate}
 
+\subsection{Compilando um programa C}
+\begin{itemize}
+\item gcc nomeDoPrograma.c -o nomeDoPrograma
+\item make nomeDoPrograma
+\item clang -args
+\begin{itemize}
+\item o $\longrightarrow$ OUTPUT
+\item l... $\longrightarrow$ LINK COM BIBLIOTECA
+\item W...
+
+\end{itemize}
+\end{itemize}
+
 \subsection{Anatomia de um programa C}
 \begin{itemize}
-\item Pré-processamento
-\item Bibliotecas
+\item Pré-processamento: procura linhas com \#, compara com os comandos do códiog e importa as bibliotecas necessárias. É seguida de compiling, assembling e linking
+\item Bibliotecas: São arquivos .h ou binários que são ligados ao código.
 \item Tipos
 \item Constantes
 \item Variáveis
@@ -110,15 +123,17 @@ Linguagem de programação estruturada
 
 \subsection{Debuggin}
 \begin{itemize}
-\item Leia documentação da linguagem
-\item Leia os comentários //(que também são documentação)
-\item Use printf/consoleLog
+\item Leia documentação da linguagem.
+\item Leia os comentários //(que também são documentação).
+\item Use printf/consoleLog.
+\item Use as funções das IDEs debug, como breakpoint.
+\item Abuse de rubber ducks.
 \end{itemize}
 
-\subsection{Known CLI commands}
+\subsection{Comandos comuns no terminal}
 \begin{itemize}
-\item ls: shows files in the directories, [-a: all], [-l: list]
-\item mv: move files or rename files
+\item ls: LIST, mostra arquivos e diretórios, [-a: all], [-l: list]
+\item mv: MOVE, move ou renomeia arquivos e diretórios
 \item rm: remove/delete file/empty directory [-r: remove non-empty directories]
 \item rmdir: remove directory
 \item mkdir: make directory/create folder
@@ -127,24 +142,138 @@ Linguagem de programação estruturada
 \end{itemize}
 
 \subsection{Data types and its formaters}
+Algumas vezes, alguns numeros são grandes demais ou "decimal" demais e precisamos usar os tipos apropriados.
 \begin{itemize}
 \item int: (\%i ou \%d) [32 bits ou 4 bytes] conta de até
-\item float: (\%f) [64 bits ou 8 bytes] conta de até 
-\item double: (\%lf) [bits ou bytes] conta de até
-\item char: *not real in C, it's actually an array* (\%c) [bits ou bytes] conta de até
-\item string: (\%c)
-\item long: (\%li) [bits ou bytes] conta de até
-\item short: (\%i ou \%d) [bits ou bytes] conta de até
-\item signed: (\%i ou \%d) [bits ou bytes] conta de até
+\item float: (\%f) [32 bits ou 4 bytes] conta de até 
+\item double: (\%lf) [64 bits ou 8 bytes] conta de até
+\item bool: (\%b) [8 bits ou 1 byte] true or false
+\item char:  (\%c) [8 bits ou 1 byte] conta de até
+\item string: (\%c) [not real in C, it's actually an array]
+\item long: (\%li) [64 bits ou 8 bytes] conta de até
+\item short: (\%i ou \%d) [16 bits ou 2 bytes] conta de até
+\item signed: (\%i ou \%d) [32 bits ou 4 bytes] conta de até
 \item unsigned: (\%i ou \%d) [bits ou bytes] conta de até
 \end{itemize}
 Some operations, like division, needs that the terms be both the same type, as to not lose data in decimal values. In the case we dont have acces to the type, we can cast the type over the old type
 
 \subsection{Mathematical operators}
+Um erro comum é a falta de casting. Exemplo, numa divisão entre dois inteiros com resto, sabemos que devemos guardar o resultado num float ou double. Mas o resultado de dois inteiros é outro inteiro, então antes devemos "type cast" o float/double nos operandos que eram inteiros pra conseguir o resultado em float. É possível também usar apenas um número com vírgula pra forçar o compilador a usar o \textit{casting} implicitamente.
+\begin{itemize}
+\item soma
+\item diferença
+\item multiplicação
+\item divisião
+\item resto (mod)
+\item atribuições seguidas de operações\\+=; -=; *=; /=; \%=.\\++; --.
+\end{itemize}
 
 \subsection{Logical operators}
+\begin{itemize}
+\item igualidade
+\item desigualdade
+\item maior que
+\item maior ou igual
+\item menor que
+\item menor ou igual
+\item não
+\item e
+\item ou inclusivo
+\item ou exclusivo
+\end{itemize}
+
+\subsection{Condicionais}
+Se, senão.
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}if (x < y)\{
+\item \tabto{2.2cm}printf("x é maior do que y");
+\item \tabto{1.1cm}\}
+\item \tabto{1.1cm}else\{
+\item \tabto{2.2cm}printf("x não é maior do que y");
+\item \tabto{1.1cm}\}
+\item \}
+\end{enumerate}
+Se, senão se, senão.
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}if (x == y)\{
+\item \tabto{2.2cm}printf("x é igual a y");
+\item \tabto{1.1cm}\}
+\item \tabto{1.1cm}else if (x < y)\{
+\item \tabto{2.2cm}printf("x é menor do que y");
+\item \tabto{1.1cm}\}
+\item \tabto{1.1cm}else\{
+\item \tabto{2.2cm}printf("x é maior do que y");
+\item \tabto{1.1cm}\}
+\item \}
+\end{enumerate}
+
+\subsection{Laços}
+\textbf{Laço "enquanto" infinito}
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}while (true)\{
+\item \tabto{2.2cm}printf("Laço infinito");
+\item \tabto{1.1cm}\}
+\item \}
+\end{enumerate}
+\textbf{Laço "enquanto" com contador (condicional)}
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}int i = 0;
+\item \tabto{1.1cm}int n = 100;
+\item \tabto{1.1cm}while (i < n)\{
+\item \tabto{2.2cm}printf("contador = \%i", i);
+\item \tabto{2.2cm}i += 1; //ou também i++
+\item \tabto{1.1cm}\}
+\item \}
+\end{enumerate}
+\textbf{Laço "enquanto, faça" com contador (condicional)}
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}int i = 0;
+\item \tabto{1.1cm}int n = 100;
+\item \tabto{1.1cm}do\{
+\item \tabto{2.2cm}printf("contador = \%i", i);
+\item \tabto{2.2cm}i += 1; //ou também i++
+\item \tabto{1.1cm}\}
+\item \tabto{1.1cm}while (i < n);
+\item \}
+\end{enumerate}
+\textbf{Laço "faça"}
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}for (int i = 0; i < 100; i++)\{
+\item \tabto{2.2cm}printf("contador = \%i", i);
+\item \tabto{1.1cm}\}
+\item \}
+\end{enumerate}
+
+\subsection{Funções}
+É necessário declarar no pré processamento, e definir após o \textit{main}.\\
+Ao definir e ao declarar (sempre nos dois) podemos pedir argumentos.\\
+Sempre tomar cuidado com escopo nas funções e nas estruturas de controle.\\
+Podemos passar qualquer mudança dentro da função (retorno) por referência (ponteiros).\\
+\subsection{Recursividade}
+Rec
 
 \section{Aula 02 - Vetores}
+\subsection{array.c}
+Índices começam a contar de 0. Podemos colocar variáveis para definir ou alcançar índices
+\begin{enumerate}
+\item \# include <stdio.h>
+\item int main(void)\{
+\item \tabto{1.1cm}int numerosPrimos[] = \{2, 3, 5, 7, 11, 13, 17, 19, 23\};
+\item \tabto{1.1cm}int numerosFibonacci[9] = \{0, 1, 1, 2, 3, 5, 8, 13, 21\};
+\item \}
+\end{enumerate}
 
 \section{Aula 03 - Algoritmos}
 
