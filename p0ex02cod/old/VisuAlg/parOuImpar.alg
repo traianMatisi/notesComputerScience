@@ -1,0 +1,14 @@
+algoritmo "parOuImpar"
+//
+//
+var
+   n : inteiro
+inicio
+   escreva("Digite um número inteiro: ")
+   leia(n)
+   se (n%2 = 0) entao
+      escreval("O número é par")
+   senao
+      escreval("O número é impar")
+   fimse
+fimalgoritmo

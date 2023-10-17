@@ -1,0 +1,17 @@
+# LISTS uses braquets [ ]
+# TUPLES uses parentesis ( )
+# DICTIONARIES uses keys { } or parentesis like this -> subject = dict()
+# to avoid creating loose variables, we make lists/tuples/dictionaries
+emptyTuple = ()
+#mesesDoAnoDigit = int(01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12)
+mesesDoAnoAbrev = ('jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez')
+mesesDoAnoCompl = ('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')
+diasDaSemanaAbrev = ('dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab')
+print('Me informa a data do seu nascimento, nessa ordem: ')
+dia = input('Dia ')
+mes = input('Mês ')
+ano = input('Ano ')
+print('Suas respostas foram, {0}, {1}, {2}.'.format(dia, mes, ano))
+print(emptyTuple)
+print(diasDaSemanaAbrev)
+#print(mesesDoAnoDigit)

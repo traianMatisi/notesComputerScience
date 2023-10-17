@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article} %tipo de documento papel e tamanho da fonte
+\usepackage[utf8x]{inputenc} %acentuação
+%\usepackage{fontspec} % for use in combo with \setmainfont{}
+%\setmainfont{file-name.ttf}[Path=file-path, BoldFont={file-name}, ItalicFont={file-name}, BoldItalicFont={file-name}]
+%\setsansfont{file-name.otf}[Path=file-path, BoldFont={...]
+\usepackage{ucs}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc} %ajusta textos copiados/colados
+\usepackage{amsmath} %símbolos matemáticos
+\usepackage{amsfonts} %símbolos matemáticos
+\usepackage{amssymb} %símbolos matemáticos
+\usepackage{amsthm} %símbolos matemáticos
+\usepackage{mathtools} %símbolos matemáticos
+\usepackage{dsfont} %símbolos matemáticos
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage{graphicx} %permite inserir figuras
+\usepackage{lmodern}
+\usepackage{fourier}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry} %layout da página
+%\usepackage{textcomp}
+\usepackage{tabto} %permitir tabulação
+%\usepackage{hyperref} % You can use \url with \usepackage{hyperref} \url{http://stackoverflow.com/}
+%\usepackage{todonotes} %enables you to insert small notes, like \todo{Rewrite this answer \ldots}
+%\usepackage{indentfirst}
+%\setlength{parindent}{1.1cm}
+\pagestyle{empty} %turn off page numbers (currently not working in my TeX distro)
+%\parindent 0px %turn off indentation
+%\setmainfont{<font name>}
+\author{Traian Matisi}
+\title{Coursera and Google: Introduction to Git and Github}
+%date{}
+
+\begin{document}
+\maketitle
+Git is a CVS (control version system).\\
+Github is a database of programmers and their codes (like a social network).
+
+\section{Cheat sheet}
+\begin{itemize}
+\item git config - -global user.<*>
+\item git config -l
+\item git init
+\item git clone
+\item git remote -<?>
+\item git diff -u -U -C<*n> -y <file> <file> ???
+\item git status
+\item git add <file>
+\item git commit -m "message"
+\item git push origin main
+\item git fetch
+\item git pull
+\item -
+\end{itemize}
+
+\section{Diferentiating files with DIFF command from command line inteface:}
+\begin{itemize}
+\item $[$user@pc$]$ \textasciitilde\$ diff helloWorld.py helloFriend.py\\
+\tabto{1.1cm} This command will show the difference between the two files.\\
+\tabto{1.1cm}It's output will return only the lines that are different between the two files.\\
+\tabto{2.2cm}The greater than sign (>) means the line was added to the file\\
+\tabto{2.2cm}The lesser than sign (<) means the line was removed from the file\\
+\tabto{2.2cm}The number codes, like (5c5, 6), means the line 5 changed to line 5 and 6\\
+\tabto{2.2cm}The number codes, like (11a13, 15), means lines 13 thru 15 was added\\
+\item $[$user@pc$]$ \textasciitilde\$ diff -u helloWorld.py helloFriend.py\\
+\tabto{1.1cm}Returns the difference in a more friendly format\\
+\tabto{2.2cm}+ means a line was added\\
+\tabto{2.2cm}- means a line was removed\\
+\item Other diffs:\\
+\tabto{1.1cm}wdiff: Returns the different words highlighted\\
+\tabto{1.1cm}meld:\\
+\tabto{1.1cm}KDiff3\\
+\tabto{1.1cm}vimdiff\\
+\item Another usefull ways to use diff, some more friendly, some less:\\
+\tabto{1.1cm}$-$
+\item $[$user@pc$]$ \textasciitilde\$ diff -u old\_file.c new\_file.c > change.diff\\
+\tabto{1.1cm}It will generate a file containing all the changes between both\\
+\tabto{1.1cm}It can show any external work by peers, and also gives us an easy patch to use with the PATCH command.\\
+\item $[$user@pc$]$ \textasciitilde\$ patch old\_file.c < change.diff\\
+\tabto{1.1cm}Will insert the changes loaded in the diff file. Note the names of the files, commands and the previous example.\\
+Now the old file has the patch and is equal to the new file.\\
+\item But, most commonly, we'll use these and other tools and features through another tool, called VCS (version control software), like git and whatnot.
+\end{itemize}
+
+\section{Configuring repositories and using git}
+\begin{itemize}
+\item $[$user@pc$]$ \textasciitilde\$ git config  --global user.email "traian@tutanota.com"\\
+This command will set our client machine to the mail designed.
+\item $[$user@pc$]$ \textasciitilde\$ git config  --global user.name "traianMatisi"\\
+This command will set our client machine to the user name designed.
+\item $[$user@pc$]$ \textasciitilde\$ cd C:/a>b>c... or /home/a/b/c... followed by...\\
+First we will change to the directory of our choosing with "cd /path to my folder/ "
+\item $[$user@pc$]$ \textasciitilde\$ git init\\
+Then, we'll start the choosen folder to initialize (start) the git control
+\item $[$user@pc$]$ \textasciitilde\$ git add old\_file.c\\
+This command will track the argumented file that is in some "git init" folder
+\item $[$user@pc$]$ \textasciitilde\$ git status\\
+Will show the mods and pending commits
+\item $[$user@pc$]$ \textasciitilde\$ git commit\\
+Will write in the git directory files the changes made so far in the non git directories files, and we will be prompted to write a message about the commit. The files are in the working tree area, the non commited mods are in the staging area, and the commited mods are in the index (.git directories)\\
+These changes are made only locally in the .git directory and local files, the .git stores all the made changes (like diff files content) througout the work and the files stores the current data only.
+\item A good analogy to understand is: The working tree is your desk, the staging area is the document cart, and the .git is the file cabinet.\\
+We make the mods in our desktop\\
+\tabto{1.1cm}\textasciitilde\$ git add ...fileName...\\
+Will add the list of mods to the cart/staging area.\\
+\tabto{1.1cm}\textasciitilde\$ git commit -m ...type the commit message...\\
+Will store the mods in the .git directory/file cabinet
+\item The basic git workflow commonly will have the following commands (we will include non git commands):\\
+\begin{itemize}
+\item$[$user@pc$]$\textasciitilde\$ mkdir ...folder\_name...\\
+If necessary, we will create a directory to work. If not just jump to the needed step
+\item$[$user@pc$]$\textasciitilde\$ cd ...C:/ or /home...\\
+We will change to the created directory.
+\item$[$user@pc$]$\textasciitilde\$ git init\\
+We initialize the current directory as a .git repo
+\item$[$user@pc$]$\textasciitilde\$ git config -l\\
+Will show the config in the repo.
+\item$[$user@pc$]$\textasciitilde\$ vim hello.c $or$ touch hello.c $or$ chmod +x hello.c\\
+We'll create a file to execute, use whatever you feel confortable with.
+\item$[$user@pc$]$\textasciitilde\$ git status\\
+Will show the files status in the .git directory.
+\item$[$user@pc$]$\textasciitilde\$ git add hello.c\\
+Will start .git tracking in our file.
+\item$[$user@pc$]$\textasciitilde\$ git commit -m 'Learning the git workflow'\\
+Will index the staged mods in our files with the -m message.
+\end{itemize}
+\item Remember to write good commit messages (good practices), some companies have their own rules to call a good commit message.
+\item $[$user@pc$]$ \textasciitilde\$ git log\\
+Will display the history of the commits.
+\item $[$user@pc$]$ \textasciitilde\$ git commit -a\\
+Adds the staged all acumulated. Dont confuse -a with add
+\item $[$user@pc$]$ \textasciitilde\$ git log -p or - -stat\\
+To look, by scroling down and copy the commit identifier, followed by...
+\item $[$user@pc$]$ \textasciitilde\$ git show q3j24987dfh23984khf...w34rd123\\
+To look the patch to verify it's validity.
+\item $[$user@pc$]$ \textasciitilde\$ git diff\\
+Equivalent to the diff -u talked earlier in this document, it can receive files names as arguments to diff only the files you want. Notice that, git diff will only show the staged mods, wich was added with git add -p (-p will show changes to see if you want them all). To show non staged and staged, usen git diff --staged
+\item $[$user@pc$]$ \textasciitilde\$ git rm <fileName.c>\\
+Will stop tracking and delete the argumented file. After, when commit, we'll need to write a message about why we deleted them (cause we'll need to commit the deletion).
+\item $[$user@pc$]$ \textasciitilde\$ git mv <old name> <new name>\\
+Will rename/move a file, also needs a commit after it.
+\item $[$user@pc$]$ \textasciitilde\$ \_-\_echo .DS\_STORE\_-\_ > .gitignore\\
+To ignore the argumented file.
+\end{itemize}
+
+\section{Undoing unwanted changes}
+\begin{itemize}
+\item $[$user@pc$]$ \textasciitilde\$ git checkout\\
+Discards the non staged changes, meaning it checks out the latest snapshot\\
+Usefull tip, -p will go through every little change you made among the two snapshots.
+\item $[$user@pc$]$ \textasciitilde\$ git reset HEAD\\
+Will unstage the added mods. The -p will permit chosing wich mod to reset.
+\item $[$user@pc$]$ \textasciitilde\$ git commit - -amend\\
+Will overwrite the previous commit. Locally is ok to amend, but if you're working in a public repositorie avoid it at all costs.
+\item $[$user@pc$]$ \textasciitilde\$ git revert HEAD\\
+It contains the invert of the last commit. And a automatic commit with the old version is made.
+\item $[$user@pc$]$ \textasciitilde\$ git revert q3j24987dfh23984khf...w34rd123\\
+Will rollback to the id 'd commit. It's like a time travel to the past.
+\end{itemize}
+
+\end{document}

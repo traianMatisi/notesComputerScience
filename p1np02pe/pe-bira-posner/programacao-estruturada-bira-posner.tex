@@ -1,0 +1,252 @@
+\documentclass[12pt,a4paper]{article} %tipo de documento papel e tamanho da fonte
+
+\usepackage[utf8x]{inputenc} %acentuação
+\usepackage{ucs}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc} %ajusta textos copiados/colados
+\usepackage{amsmath} %símbolos matemáticos
+\usepackage{amsfonts} %símbolos matemáticos
+\usepackage{amssymb} %símbolos matemáticos
+\usepackage{amsthm} %símbolos matemáticos
+\usepackage{mathtools} %símbolos matemáticos
+\usepackage{dsfont} %símbolos matemáticos
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage{graphicx} %permite inserir figuras
+\usepackage{lmodern}
+\usepackage{fourier}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} %layout da página
+\usepackage{textcomp}
+\usepackage{tabto} %permitir tabulação
+\usepackage{hyperref} % You can use \url with \usepackage{hyperref} \url{http://stackoverflow.com/}
+\usepackage{todonotes} %enables you to insert small notes, like \todo{Rewrite this answer \ldots}
+
+\pagestyle{empty} %turn off page numbers (currently not working in my TeX distro)
+\parindent 0px %turn off indentation
+
+\title{Notas de aula - Programação estruturada 2021-1}
+\author{Traian Matisi}
+
+\begin{document}
+\maketitle
+
+\section{Algoritmos}
+
+\subsection{Linguagem natural}
+\begin{itemize}
+\item Linguagem natural:
+Imensa capacidade de comunicar.
+\item Linguagem algoritmica:
+Limitada e restrita visando precisão e objetividade, procura evitar ambguidade.
+\item Pseudocódigo:
+Usa linguagem natural de maneira algoritmica visando um meio termo, criando assim uma ponte entre o mundo real e o progrma que se deseja.
+\item Fluxograma:
+Representação ilustrada do pseudocódigo, visa orientar melhor o programador, cada tipo de algoritmo é representado por uma forma geométrica.
+\item Algoritmo:
+Sequência de passos bem definidos, sem ambiguidade, finito e que se propõe a solucionar algum problema. Se assemelha a uma receita. Os algoritmos possuem estruturas básicas que emulam as propriedades das linguagens de programação. Os problemas sempre possuem mais de uma solução, e portanto existem mais de um algoritmos para um mesmo problema (mas qual é a definição de problema?).
+\item Problema:
+É um conjunto de dados de entrada (também chamado de instância) e uma questão formulada sobre essa instância.
+\item As características fundamentais dos algoritmos
+\begin{itemize}
+\item Terminar em tempo finito.
+\item Passos definidos e sem ambiguidade.
+\item Deve conter zero ou mais entradas.
+\item Deve fornecer alguma saída.
+\item Deve funcionar
+\item Exemplo $\rightarrow ax+b=0 \rightarrow x=-b/a$\\	"a" e "b" são as entradas e x é a saída.
+\end{itemize}
+\item Escrevendo o algoritmo para calcular x:
+\begin{enumerate}
+\item leia a ($a \leftarrow$ primeira entrada)
+\item leia b ($b \leftarrow$ segunda entrada)
+\item $x \leftarrow (-b/a)$
+\item escreva $x$
+\end{enumerate}
+\item Já temos aqui os conceitos de variáveis e operadores aritméticos. Perceba que matematicamente o algoritmo acima não trata da entrada de a = 0. Pra isso teríamos que verificar antes se há condição de realizar o código, e para isso exitem estruturas básicas em programação pra tratar possíveis erros.
+\item Pseudocódigo, achar X numa equação de primeiro grau:
+\begin{enumerate}
+\item Ler a
+\item Ler b
+\item Se $(a=0)$ então
+\item \tabto{1.1cm}Escreva: "A equação não tem solução $\mathbb{R}$."
+\item Senão
+\item \tabto{1.1cm}$x \leftarrow (\frac{-b}{a})$
+\item Fim-Se
+\end{enumerate}
+\item Pseudocódigo, calcular média das notas:
+\begin{enumerate}
+\item Ler nota $a$
+\item Ler nota $b$
+\item $x \leftarrow \frac{a+b}{2}$
+\item Escrever $x$
+\end{enumerate}
+É possivel criar outro fluxo ou mesmo estender esse para verificar se a nota é suficiente para passar
+\item Pseudocódigos precisam ser simples e objetivos:\\
+1 Um verbo por frase\\
+2 Precisa ser compreensível por qualquer público\\
+3 Frases curtas e simples\\
+4 Ser objetivo\\
+5 Não ser ambíguo\\
+6 Palavras em negrito significam palavras reservadas para instruções\\
+7 Palavras em itálico significam variáveis\\
+8 No papel escrito não há necessiddade de negrito ou itálico
+\item Símbolos de fluxograma:\\
+1 Cilindro: Símbolo para início e fim, podem existir mais de um símbolo final\\
+2 Retângulo: Símbolo de processamento\\
+3 Losango: Símbolo de tomada de decisões\\
+4 Trapezóide: Símbolo de entrada de dados\\
+5 Skate pipe: Símbolo de saída de dados\\
+6 Pequeno círculo: Conector de fluxos entre páginas ou entre ramos\\
+\item Como exercício, realizar os dois pseudocódigos acima com os seis símbolos aprendidos.
+\item Existem mais símbolos além desses seis para concorrência, verificação de erros, etc. serão abordados num futuro próximo.
+\item Tipos de comandos:\\
+1 Ler\\
+2 Escrever\\
+3 Atribuição\\
+4 Dados booleanos\\
+5 Dados numéricos\\
+6 Dados alfanuméricos\\
+7 Controle: se, senão\\
+8 Controle: caso\\
+n Repetição: enquanto\\
+n Repetição: para\\
+n Repetição: faça... enquanto\\
+n Procedimentos:\\
+\end{itemize}
+
+\section{Conteúdo online}
+
+\subsection{Sites}
+\begin{enumerate}
+\item BLOCKLY: < https://blockly.games/ >
+\item blockly: < https://developers.google.com/blockly/ >
+\item codepen: < https://codepen.io/ >
+\item codepad: < https://codepad.co/ >
+\item playcode: < https://playcode.io/ >
+\item JsFiddle: < https://jsfiddle.net/ >
+\item CSS deck: < https://cssdeck.com/ >
+\item beecrowd: < https://www.beecrowd.com.br/ >
+\item exercism: < https://exercism.org/ >
+\item codewars: < https://www.codewars.com/ >
+\item hackerRank: < https://www.hackerrank.com/ >
+\item leetCode: < https://leetcode.com/ >
+\item stack overflow: < https://stackoverflow.com/ >
+\item stack exchange: < https://tex.stackexchange.com/ >
+\item Toptal: < https://www.toptal.com/web\# contract-just-incredible-coders-now >
+\item webdeveloper.com: < https://www.webdeveloper.com/ >
+\item Github: < https://github.com/ >
+\item Mozilla developers: < https://developer.mozilla.org/ >
+\item SAP: < https://community.sap.com/ >
+\item Expert Exchange: < https://www.experts-exchange.com/ >
+\item r/webdev, fórum do Reddit: < https://www.reddit.com/r/webdev/ >
+\item Bootstrap, grupo do Slack: < https://bootstrap-slack.herokuapp.com/ >
+\item DEV: < https://dev.to/ >
+\item coderwall: < https://coderwall.com/ >
+\item Designer Hangout: < https://www.designerhangout.co/ >
+\item Bytes: < https://bytes.com/ >
+\item coffeCup: < https://www.coffeecup.com/forums/ >
+\item hashNode: < https://hashnode.com/ >
+\item BitDegree: < https://www.bitdegree.org/learn/ >
+\item Coursera: < https://www.coursera.org/ >
+\item Udemy: < https://www.udemy.com/ >
+\item code.org: < https://code.org/ >
+\item codeAcademy: < https://www.codecademy.com/ >
+\item freeCodeCamp: < https://www.freecodecamp.org/ >
+\item codeConquest: < https://www.codeconquest.com/ >
+\item odinProject: < https://www.theodinproject.com/ >
+\item edX: < https://www.edx.org/ >
+\item MIT open courseware: < https://www.codeconquest.com/ >
+\item Khan Academy: < https://www.khanacademy.org/ >
+\item Brilliant: < https://brilliant.org/ >
+\item Dash General Assembly: < https://dash.generalassemb.ly/ >
+\item w3schools: < https://www.w3schools.com/ >
+\item hackr.io: < http://hackr.io/ >
+\item bento: < https://bento.io/ >
+\item code avengers: < https://www.codeavengers.com/ >
+\item Solo Learn: < https://www.sololearn.com/ >
+\item Google Developers Training: < https://developers.google.com/training >
+\item Developers.Android.com: < https://developer.android.com/index.html >
+\item Developers.Google.com: < https://developers.google.com/ >
+\item Upskill: < https://upskillcourses.com/ >
+\item Plural Sight: < http://pluralsight.com/ >
+\item codeasy.net: < https://codeasy.net/ >
+\item hack.pledge(): < https://hackpledge.org/ >
+\item aGupie Ware: < http://blog.agupieware.com/ >
+\item edabit: < http://edabit.com/ >
+\item instructables: < https://developers.google.com/ >
+\item Code Combat: < https://br.codecombat.com/ >
+\item CodaKid
+\item Byjuu
+\item CodeSpark Academy
+\item Create \& Learn
+\item Bit Degree
+\item Tynker
+\item Coding With Kids
+\item Codemoji
+\item linkedIN learning - 600 reais anuais
+\item Lynda: < https://www.lynda.com/ >
+\item general assembly dash - Web development
+\item upskill
+\item MDN web docs
+\item edX (CS50)
+\item https://pll.harvard.edu/catalog/free
+\item https://www.algoexpert.io - 62 dólares por ano
+\end{enumerate}
+
+\subsection{Aplicativos}
+\begin{enumerate}
+\item Scratch
+\item Bee-bot
+\item Grasshoper
+\item Evernote
+\item Notion
+\item Obsidian
+\item QPython
+\end{enumerate}
+
+\section{Operadores}
+
+\subsection{Operadores aritméticos}
+\begin{itemize}
+\item Soma ($a + b = c$)
+\item Subtração ($a - b = c$)
+\item Multiplicação ($a \times b = c$) ou ($a \cdot b = c$) ou ($a * b = c$)
+\item Divisão ($a \div b = c$) ou ($\frac{a}{b} = c$) ou ($a/b = c$)
+\item Resto da divisão ($a _{mod}b = c$) ou ($a \% b = c$)
+\end{itemize}
+
+\subsubsection{Operadores relacionais}
+\begin{itemize}
+\item Igual $\rightarrow$ =
+\item Maior $\rightarrow$ >
+\item Maior ou igual $\rightarrow$ >=
+\item Menor $\rightarrow$ <
+\item Menor ou igual $\rightarrow$ <=
+\item Diferente $\rightarrow$ !=
+\end{itemize}
+
+\subsection{Operadores lógicos}
+\begin{itemize}
+\item E $\rightarrow$ \&\&
+\item Ou $\rightarrow$ ||
+\item Não $\rightarrow$ !
+\end{itemize}
+
+\subsection{Exercícios}
+Escreva uma pseudocódigo para cada item abaixo:
+\begin{enumerate}
+\item Somar 3 números
+\item Calcular a média de um aluno onde:\\Média = (2 * Prova1 + 2 * Prova2 + Grupo)/5\\Grupo = (Participação + 2 * Trabalho)/3
+\item Ler o nome de duas pessoas, trocar esses nomes nas variáveis e imprimí-los na tela
+\item Calcular a média das provas de uma turma de 60 alunos
+\item Determinar a maior nota entre as provas dos 60 alunos
+\item Determinar quantaas vezes essa nota ocorreu
+\item Em posse de 3 vasilhas de 4L, 9L e uma maior sem medida, encher a maior com 6L
+\item Em posse de 3 vasilhas de 4L, 9L e uma maior sem medida, encher a maior com 35L
+\item De posse de $3^{n}$ moedas de mesmo pesso exceto por uma e uma balança de precisão, elabora um algoritmo que permita identificar rapidamente qual a moeda
+\item Um algoritmo que informe o número de passos para a conjectura de Ulam para os números inteiros x maior que 1 e menor que 10\\Para tal, considere:\\Se x for ímpar, x = 3x + 1\\Se x for par, x = x/2\\Repetir até que x = 1
+\item Aproximação de $\pi$
+\end{enumerate}
+Tente fazer no VisuAlg ou Portugol estúdio, ambos em conjunto com fluxogramas.
+
+\end{document}
