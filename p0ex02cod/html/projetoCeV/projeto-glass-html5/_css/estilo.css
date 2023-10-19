@@ -10,14 +10,14 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #eeeeee;
-    color: rgba(0, 0, 0, 1)
+    color: #000000
 }
 
 div#interface {
-    width: 900px;
+    width: 1000px;
     padding: 20px;
     background-color: #ffffff;
-    margin: -20px auto 0px auto;
+    margin: -3px auto 0px auto;
     box-shadow: 0px 0px 10px #000000;
 }
 
@@ -59,9 +59,9 @@ header#cabecalho h2 {
 }
 
 header#cabecalho img#icone {
-    position: absolute;
-    left: 777px;
-    top: 77px;
+    position: relative;
+    left: 735px;
+    top: -50px;
 }
 
 /* Formatacao de imagens com legendas */
@@ -104,13 +104,14 @@ nav#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: -14px;
+    top: -5px;
     left: 500px;
 }
 
 nav#menu li {
     display: inline-block;
-    background-color: #bbbbbb;
+    background-color: #eeeeee;
+    box-shadow: 1px 1px 6px #333333;
     padding: 10px;
     margin: 2px;
     transition: background-color 1s;
@@ -133,12 +134,51 @@ nav#menu a:hover {
     color: #ffffff;
 }
 
-section#corpo {
+nav#album {
     display: block;
-    width: 510px;
+}
+
+nav#album ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav#album li {
+    display: inline-block;
+    background-color: #eeeeee;
+    box-shadow: 1px 1px 6px #333333;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#album li:hover {
+    background-color: #606060;
+}
+
+nav#album a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav#album a:hover {
+    color: #ffffff;
+}
+
+section#corpo-index {
+    display: block;    
+    width: 570px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 17px;
+}
+
+section#corpo {
+    display: block;
+    /*border-right: 1px solid #000000;
+    border-left: 1px solid #000000;*/
+    padding: 17px;
 }
 
 article#noticia-principal h2 {
@@ -218,7 +258,7 @@ table#spec caption span {
 }
 aside#lateral {
     display: block;
-    width: 342px;
+    width: 380px;
     float: right;
     background-color: #dddddd;
     padding: 10px;
