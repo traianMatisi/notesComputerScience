@@ -518,8 +518,36 @@ else
     console.log(`Brazil it's not for amateurs!`)
 }
 
+//CODING CHALLENGE #3
+const dolphins_Data1 = [96, 108, 89];
+let dd1 = (dolphins_Data1[0] + dolphins_Data1[1] + dolphins_Data1[2])/3
+
+const koalas_Data1 = [88, 91, 110];
+let kd1 = (koalas_Data1[0] + koalas_Data1[1] + koalas_Data1[2])/3
+
+if (dd1 > kd1)
+{
+    console.log(`Dolphins are the winners with the average ${dd1} X ${kd1}`)
+}
+else if (dd1 < kd1)
+{
+    console.log(`Koalas are the winners with the average of ${kd1} X ${dd1}`)
+}
+else{
+    console.log(`Its a tie: ${kd1} x ${dd1}`)
+}
+
+
+// TO DO
+const dolphins_Bonus1 = [97, 112, 101];
+const koalas_Bonus1 = [109, 95, 123];
+
+const dolphins_Bonus2 = [97, 112, 101];
+const koalas_Bonus2 = [109, 95, 106];
+
 
 
 
 */
+
 
