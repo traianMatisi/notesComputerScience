@@ -609,6 +609,30 @@ if (day === 'monday') {
   console.log('Not a valid day!');
 }
 
+// ASSIGMENT SWITCH CASE
+const language = `portuguese`;
+switch (language)
+{
+    case `chinese`:
+        console.log(`MOST number of native speakers!`);
+        break;
+    case `spanish`:
+        console.log(`2nd place in number of native speakers`);
+        break;
+    case `english`:
+        console.log(`3rd place`);
+        break;
+    case `hindi`:
+        console.log(`Number 4`);
+        break;
+    case `arabic`:
+        console.log(`5th most spoken language`);
+        break;
+    default:
+        console.log(`Great language too :D`);
+        break;
+}
+
 // STATEMENT VS EXPRESSIONS
 
 //statements are commands
@@ -635,6 +659,34 @@ if (age >= 18) {
 console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+const msg1 = `Hello, friend`;
+const msg2 = `Hello, world`;
+console.log('' ? 2 : 3); // falsy result
+console.log(' ' ? `${msg1}` : `${msg2}`); // truthy result
+
+// ASSIGMENT TERNARY OPERATORS
+const population = 210000000;
+const country = `Brazil`;
+console.log(population > 33000000 ?  `${country} population is above average` : `${country} population is below average`);
+
+//CODING CHALLENGE #4
+let bill;
+let tip;
+
+bill = 275;
+tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+console.log(`Bill = ${bill}\nTip = ${tip}\nTotal = ${bill + tip}`);
+
+bill = 40;
+tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+console.log(`Bill = ${bill}\nTip = ${tip}\nTotal = ${bill + tip}`);
+
+bill = 430;
+tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+console.log(`Bill = ${bill}\nTip = ${tip}\nTotal = ${bill + tip}`);
+
+
 
 
 */
