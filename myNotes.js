@@ -520,21 +520,22 @@ else
 
 //CODING CHALLENGE #3
 const dolphins_Data1 = [96, 108, 89];
-let dd1 = (dolphins_Data1[0] + dolphins_Data1[1] + dolphins_Data1[2])/3
+let averageDolphins = (dolphins_Data1[0] + dolphins_Data1[1] + dolphins_Data1[2])/3
 
 const koalas_Data1 = [88, 91, 110];
-let kd1 = (koalas_Data1[0] + koalas_Data1[1] + koalas_Data1[2])/3
+let averageKoalas = (koalas_Data1[0] + koalas_Data1[1] + koalas_Data1[2])/3
 
-if (dd1 > kd1)
+if (averageDolphins > averageKoalas)
 {
-    console.log(`Dolphins are the winners with the average ${dd1} X ${kd1}`)
+    console.log(`Dolphins are the winners with the average ${averageDolphins} X ${averageKoalas}`)
 }
-else if (dd1 < kd1)
+else if (averageDolphins < averageKoalas)
 {
-    console.log(`Koalas are the winners with the average of ${kd1} X ${dd1}`)
+    console.log(`Koalas are the winners with the average of ${averageKoalas} X ${averageDolphins}`)
 }
-else{
-    console.log(`Its a tie: ${kd1} x ${dd1}`)
+else if (averageDolphins === averageKoalas)
+{
+    console.log(`Its a tie: ${averageKoalas} x ${averageDolphins}`)
 }
 
 
@@ -545,7 +546,95 @@ const koalas_Bonus1 = [109, 95, 123];
 const dolphins_Bonus2 = [97, 112, 101];
 const koalas_Bonus2 = [109, 95, 106];
 
+const dolphins_Bonus1 = [97, 112, 101];
+const koalas_Bonus1 = [109, 95, 123];
 
+let averageDolphins = (dolphins_Data1[0] + dolphins_Data1[1] + dolphins_Data1[2])/3
+
+const dolphins_Bonus2 = [97, 112, 101];
+const koalas_Bonus2 = [109, 95, 106];
+
+if (averageDolphins > averageKoalas)
+{
+    console.log(`Dolphins are the winners with the average ${averageDolphins} X ${averageKoalas}`)
+}
+else if (averageDolphins < averageKoalas)
+{
+    console.log(`Koalas are the winners with the average of ${averageKoalas} X ${averageDolphins}`)
+}
+else if (averageDolphins === averageKoalas)
+{
+    console.log(`Its a tie: ${averageKoalas} x ${averageDolphins}`)
+}
+
+
+// The switch Statement
+const day = 'friday';
+
+switch (day) {
+  case 'monday': // day === 'monday'
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+    break;
+  case 'tuesday':
+    console.log('Prepare theory videos');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write code examples');
+    break;
+  case 'friday':
+    console.log('Record videos');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekend :D');
+    break;
+  default:
+    console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+  console.log('Plan course structure');
+  console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+  console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('Write code examples');
+} else if (day === 'friday') {
+  console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekend :D');
+} else {
+  console.log('Not a valid day!');
+}
+
+// STATEMENT VS EXPRESSIONS
+
+//statements are commands
+//expressions are values that statements uses to accomplish some command
+
+//THE TERNARY IF OPERATOR
+
+//(EXPRESSION OF CONDITION) ? (COMMANDS IF TRUE) : (COMMANDS IF FALSE)
+// __ ? __ : __
+
+// The Conditional (Ternary) Operator
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine ';
+} else {
+  drink2 = 'water';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
 
 
 */
