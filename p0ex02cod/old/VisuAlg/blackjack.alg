@@ -1,7 +1,7 @@
 algoritmo "blackjack"
-// O jogo não está estatísticamente correto pois não leva os naipes em
-//consideração, portanto um "naipe" pode aparecer até 5 vezes, para isso é
-//necessário criar uma matriz com as 52 cartas, matriz estará mais a frente
+// O jogo nao esta estatisticamente correto pois nao leva os naipes em
+//consideracao, portanto um "naipe" pode aparecer ate 5 vezes, para isso e
+//necessario criar uma matriz com as 52 cartas, matriz estare mais a frente
 //nas aulas
 //
 var
@@ -28,7 +28,7 @@ inicio
                interrompa
             senao
                se (carta = "S") ou (carta = "s") entao//pedido jogador
-                  cartaJ := randi(12) + 1 //randi() é aleatótio a partir de 0
+                  cartaJ := randi(12) + 1 //randi() ï¿½ aleatï¿½tio a partir de 0
                   totalJ := totalJ + cartaJ
                fimse
                se (totalJ > 21) entao
@@ -52,7 +52,7 @@ inicio
                   interrompa
                senao
                   se (totalB < totalJ) e (totalJ < 21) entao//pedido banca
-                     cartaB := randi(12) + 1 //randi() é aleatório a partir de 0
+                     cartaB := randi(12) + 1 //randi() ï¿½ aleatï¿½rio a partir de 0
                      totalB := totalB + cartaB
                   fimse
                fimse
@@ -60,7 +60,7 @@ inicio
                   vencedor := verdadeiro
                   placarJ := placarJ + 1
                   limpatela
-                  escreval("Parabéns, o sr venceu essa rodada!")
+                  escreval("Parabï¿½ns, o sr venceu essa rodada!")
                   escreval("Soma das cartas do jogador...", totalJ)
                   escreval("Soma das cartas da banca.....", totalB)
                   escreval("Placar parcial:")
