@@ -1,0 +1,28 @@
+--- slides.c	2021-12-11 09:20:34.000000000 -0300
++++ myNotes.c	2023-11-06 09:02:25.600395100 -0300
+@@ -1,6 +1,5 @@
+ Estruturas Básicas:
+ 
+-
+ 	#Comando de Atribuição
+ 		' = '
+ 		variável = 10 ou 'c'   atribui o numero ou a letra, a variavel
+@@ -15,7 +14,7 @@
+ 	#Dados Numéricos
+ 		Inteiros:  1, -10
+ 
+-		Reais:  3.5, -10.3
++		Reais (precisão simples e dupla precisão):  3.5, -10.3
+ 
+ 
+ 	#Dados Alfanuméricos
+@@ -27,7 +26,8 @@
+ 
+ 
+ 	#Expressões Aritméticas
+-		Operadores:   + - * / % -- ++ soma subtração multiplicação divisão resto decremento incremento
++		Operadores:   + - * / % -- ++
++		(soma subtração multiplicação divisão resto decremento incremento)
+ 	
+ 
+ 	#Operadores	
