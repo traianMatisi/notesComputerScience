@@ -700,6 +700,71 @@ Eliminates some JavaScript silent errors by changing them to throw errors.
 Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode.
 Prohibits some syntax likely to be defined in future versions of ECMAScript.
 
+#############################################
+# FUNCTION DECLARATIONS (classic functions) #
+#############################################
+
+fatorial example a:
+//###########################################
+let number_a = 3
+console.log(fatorial(number_a)); //call NAME(ARGUMENT) ... can be called before declaration
+function fatorial(number_a) {
+    if (number_a < 0) {
+        return `Action forbidden! Number must be positive integer greater than 0`;
+    }
+    else if (number_a <= 1) {
+        return 1;
+    }
+    else {
+        return number_a * fatorial(number_a - 1);
+    }
+}
+
+
+##############################################
+# FUNCTION EXPRESSIONS (anonymous functions) #
+##############################################
+
+fatorial example b:
+//############################################
+let number_b = 4;
+const result = function(number_b) {
+    if (number_b < 0) {
+        return `Action forbidden! Number must be positive integer greater than 0`;
+    }
+    else if (number_b <= 1) {
+        return 1;
+    }
+    else {
+        return number_b * result(number_b - 1);
+    }
+}
+console.log(result(number_b)); call NAME(ARGUMENT)
+//only calls after function expression
+
+
+
+##############################################
+# ARROW FUNCTIONs                            #
+##############################################
+
+fatorial example c:
+//############################################
+let number_c = 5;
+const total = number_c => { //const NAME = PARAMETER => CODE
+    if (number_c < 0) {
+        return `Action forbidden! Number must be positive integer greater than 0`;
+    }
+    else if (number_c <= 1) {
+        return 1;
+    }
+    else {
+        return number_c * total(number_c - 1);
+    }
+}
+console.log(total(number_c));// call NAME(ARGUMENT)
+//only calls after function expression
+
 */
 
 
