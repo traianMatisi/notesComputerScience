@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Traian
- *
- */
-module poo {
-}
